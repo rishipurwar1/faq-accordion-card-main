@@ -9,7 +9,7 @@
 
 body {
   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,33 +17,41 @@ body {
 
 .container {
   width: 930px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* align-items: center; */
-  /* justify-content: center; */
+  display: flex;
   background-color: white;
-  /* overflow: hidden; */
   border-radius: 20px;
+  margin: 15px;
 }
 
-.image {
+.image-container {
   position: relative;
   padding: 50px 50px 50px 0;
-  margin-left: -50px;
-  /* overflow: visible; */
+  margin-left: -80px;
+  z-index: 0;
+}
+
+.inner {
   overflow: hidden;
+}
+
+.sec-img {
+  position: absolute;
+  top: -300px;
+  left: -500px;
+  z-index: -1;
 }
 
 .box {
   position: absolute;
+  display: block;
   top: 190px;
   left: -30px;
-  overflow: hidden;
 }
 
 .faq {
   padding: 50px;
   padding-bottom: 0;
+  width: 100%;
 }
 
 .faq h2 {
@@ -92,7 +100,7 @@ input {
 }
 
 input:checked ~ .content {
-  height: 60px;
+  height: 64px;
   opacity: 1;
 }
 
@@ -104,4 +112,30 @@ input:checked ~ label {
 input:checked ~ label span {
   transition: 0.4s;
   transform: rotate(180deg);
+}
+
+@media (max-width: 890px) {
+  .container {
+    max-width: 450px;
+    flex-direction: column;
+    margin-top: 100px;
+  }
+
+  .faq h2 {
+    text-align: center;
+  }
+  .box {
+    display: none;
+  }
+
+  .image-container {
+    padding: 0;
+    margin: 0 auto;
+    margin-top: -110px;
+  }
+
+  .sec-img {
+    top: 100px;
+    left: 20px;
+  }
 }

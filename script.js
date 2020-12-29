@@ -1,16 +1,12 @@
-// const buttons = document.querySelectorAll('button');
-// const contents = document.querySelectorAll('.content');
+const inputs = document.querySelectorAll('input');
 
-// buttons.forEach(button => {
-//     button.addEventListener('click', (e) => {
-//         const sibling = e.target.nextElementSibling;
-//         sibling.classList.toggle('active');
-//         contents.forEach(content => {
-//             if(content !== sibling){
-//                 if(content.className === 'content active'){
-//                     content.classList.remove('active');
-//                 }
-//             }
-//         });
-//     });
-// });
+inputs.forEach(input => {
+    input.addEventListener('click', (e) => {
+        inputs.forEach(item => {
+            if(item.checked){
+                item.checked = false;
+                e.target.checked = true;
+            }
+        });
+    });
+});

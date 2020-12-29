@@ -8,9 +8,20 @@
 </head>
 <body>
   <div class="container">
-    <div class="image">
-      <img src="./images/illustration-woman-online-desktop.svg" alt="">
-      <img class="box" src="./images/illustration-box-desktop.svg" alt="">
+    <div class="image-container">
+      <div class="inner">
+        <picture>
+          <source srcset="./images/illustration-woman-online-mobile.svg" media="(max-width: 890px)">
+          <img class="main-img" src="./images/illustration-woman-online-desktop.svg" alt="">
+        </picture>
+        <picture>
+          <source srcset="./images/bg-pattern-mobile.svg" media="(max-width: 890px)">
+          <img class="sec-img" src="./images/bg-pattern-desktop.svg" alt="">
+        </picture>
+      </div>
+      <div class="outer">
+        <img class="box" src="./images/illustration-box-desktop.svg" alt="">
+      </div>
     </div>
     <div class="faq">
       <h2>FAQ</h2>
