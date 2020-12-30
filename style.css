@@ -92,7 +92,6 @@ input {
 
 .content {
   padding: 5px 0px;
-  /* margin: 0 0 1px 0; */
   color: hsl(240, 6%, 50%);
   font-size: 14px;
   overflow: hidden;
